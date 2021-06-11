@@ -1,0 +1,20 @@
+Instructions to run the docker Image on localhost
+
+Make sure docker for linux container is up and running and port 80 is available to map
+
+In Powershell please make sure you are in ImageGallery\ImageGallery path because thats where the Dockerfile is located. Once you are in the directory then please run the following command
+
+docker build -t dotnetweb:1 .
+
+Then go to 
+wwwroot/images and run the following command
+
+docker run -it -d -v ${PWD}:/app/wwwroot/Images/ -p 80:80 --name webdotnet dotnetweb:1
+
+go to localhost and the app will be up and running
+
+
+
+
+
+
